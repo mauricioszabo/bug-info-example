@@ -1,0 +1,13 @@
+;; shadow-cljs configuration
+{:source-paths ["src"]
+
+ :dependencies [[devcards "0.2.5"]
+                [nubank/matcher-combinators "1.0.1"]]
+
+ :dev-http {8000 "public"}
+
+ :builds {:browser {:target :browser
+                    :output-dir "public/js"
+                    :asset-path "js"
+                    :modules {:main {:entries [foo.tests]}}
+                    :compiler-options {:devcards true}}}}
